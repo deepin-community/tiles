@@ -1,0 +1,9 @@
+Document: libtiles-java-doc
+Title: API Javadoc for Tiles
+Author: Tiles developers
+Abstract: This is the API Javadoc provided by the Tiles library.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/libtiles-java/api/index.html
+Files: /usr/share/doc/libtiles-java/api/*

@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=maven
+
+override_dh_auto_configure:
+	dh_auto_configure
+	mkdir -p src/tiles-test-pom
+	echo '<project><modelVersion>4.0.0</modelVersion><groupId>org.apache.tiles</groupId><artifactId>tiles-test-pom</artifactId><version>2.2.2</version><packaging>pom</packaging></project>' > src/tiles-test-pom/pom.xml
+
+override_dh_auto_build:
+	dh_auto_build -- --file src/pom.xml package javadoc:aggregate
+
+override_dh_auto_test:
+	dh_auto_test -- --file src/pom.xml test
+
+override_dh_auto_install:
+	dh_auto_install -- --file src/pom.xml
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f src/tiles-test-pom/pom.xml

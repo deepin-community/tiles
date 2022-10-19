@@ -1,0 +1,6 @@
+junit junit jar s/3\..*/3.x/
+org.springframework * * s/.*/3.x/
+javax.servlet s/servlet-api/javax.servlet-api/ jar s/.*/3.1/
+javax.servlet.jsp s/jsp-api/javax.servlet.jsp-api/ jar s/.*/2.3/
+javax.el s/el-api/javax.el-api/ jar s/.*/3.0/
+org.apache.tomcat s/jasper-el/tomcat-jasper-el/ * s/.*/9.x/

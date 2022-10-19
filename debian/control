@@ -1,0 +1,63 @@
+Source: tiles
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Damien Raude-Morvan <drazzib@debian.org>
+Build-Depends:
+ debhelper (>= 11~),
+ default-jdk,
+ libcommons-digester-java,
+ libeasymock-java,
+ libfreemarker-java,
+ libmaven-bundle-plugin-java,
+ libmaven-javadoc-plugin-java,
+ libmvel-java,
+ libognl-java,
+ libservlet3.1-java,
+ libslf4j-java,
+ libspring-core-java,
+ libspring-web-java,
+ libtiles-autotag-java,
+ libtiles-request-java,
+ libtomcat9-java,
+ libvelocity-tools-java,
+ maven-debian-helper
+Standards-Version: 4.2.1
+Vcs-Git: https://salsa.debian.org/java-team/tiles.git
+Vcs-Browser: https://salsa.debian.org/java-team/tiles
+Homepage: http://tiles.apache.org
+
+Package: libtiles-java
+Architecture: all
+Depends: ${maven:Depends}, ${misc:Depends}
+Suggests: ${maven:OptionalDepends}
+Description: Java templating framework for web application user interfaces
+ Apache Tiles is a Java templating framework built to simplify the development
+ of web application user interfaces. Tiles allows authors to define page
+ fragments which can be assembled into a complete page at runtime.
+ .
+ Tiles grew in popularity as a component of the popular
+ Struts <http://struts.apache.org/1.x/> framework.
+ .
+ It has since been extracted from Struts and is now integrated with various
+ frameworks, such as Struts 2 <http://struts.apache.org/2.x/>
+ and Shale <http://shale.apache.org/>.
+
+Package: libtiles-java-doc
+Architecture: all
+Section: doc
+Depends: ${maven:DocDepends}, ${misc:Depends}
+Suggests: ${maven:DocOptionalDepends}
+Description: Java templating framework for web application user interfaces - documentation
+ Apache Tiles is a Java templating framework built to simplify the development
+ of web application user interfaces. Tiles allows authors to define page
+ fragments which can be assembled into a complete page at runtime.
+ .
+ Tiles grew in popularity as a component of the popular
+ Struts <http://struts.apache.org/1.x/> framework.
+ .
+ It has since been extracted from Struts and is now integrated with various
+ frameworks, such as Struts 2 <http://struts.apache.org/2.x/>
+ and Shale <http://shale.apache.org/>.
+ .
+ This package contains the Javadoc API of Tiles.

@@ -1,0 +1,12 @@
+junit junit * * * *
+net.sourceforge.maven-taglib maven-taglib-plugin * * * *
+org.apache.maven.plugins maven-checkstyle-plugin * * * *
+org.apache.maven.plugins maven-pmd-plugin * * * *
+org.apache.maven.plugins maven-project-info-reports-plugin * * * *
+org.apache.maven.plugins maven-release-plugin * * * *
+org.apache.maven.plugins maven-scm-publish-plugin * * * *
+org.apache.shale shale-test * * * *
+org.codehaus.mojo jxr-maven-plugin * * * *
+org.codehaus.mojo rat-maven-plugin * * * *
+org.easymock easymockclassextension * * * *
+net.sf.dtddoc dtddoc-maven-plugin * * * *

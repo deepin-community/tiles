@@ -1,0 +1,171 @@
+tiles (3.0.7-4) unstable; urgency=medium
+
+  * Team upload.
+  * Depend on libtomcat9-java instead of libtomcat8-java
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 03 Dec 2018 17:47:30 +0100
+
+tiles (3.0.7-3) unstable; urgency=medium
+
+  * Team upload.
+  * Added the missing build dependency on libeasymock-java
+  * Standards-Version updated to 4.2.1
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 19 Sep 2018 11:02:12 +0200
+
+tiles (3.0.7-2) unstable; urgency=medium
+
+  * Team upload.
+  * Removed the unused build dependency on maven-ant-helper
+  * Standards-Version updated to 4.1.4
+  * Switch to debhelper level 11
+  * Use salsa.debian.org Vcs-* URLs
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 26 Jun 2018 10:16:17 +0200
+
+tiles (3.0.7-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 16 Sep 2016 14:48:07 +0200
+
+tiles (3.0.5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - New dependencies on libtiles-autotag-java and libtiles-request-java
+    - No longer build the removed tiles-servlet-wildcard module
+  * Transition to the Servlet API 3.1 (Closes: #801034)
+  * Standards-Version updated to 3.9.8 (no changes)
+  * Converted debian/copyright to the Copyright Format 1.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 30 May 2016 11:24:26 +0200
+
+tiles (2.2.2-7) unstable; urgency=medium
+
+  * Team upload.
+  * Build with maven-debian-helper
+  * Moved the package to Git
+  * Standards-Version updated to 3.9.7 (no changes)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sat, 02 Apr 2016 00:13:38 +0200
+
+tiles (2.2.2-6) unstable; urgency=medium
+
+  * Team upload.
+  * Build and install the tiles-extras and tiles-velocity modules
+  * Improved the reproducibility of the javadoc (-locale en -notimestamp)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Tue, 27 Oct 2015 23:50:51 +0100
+
+tiles (2.2.2-5) unstable; urgency=medium
+
+  * Team upload.
+  * debian/control:
+    - Transition to libtomcat8-java (Closes: #759631)
+    - Removed the suggested dependency on libservlet2.5-java
+    - Standards-Version updated to 3.9.6 (no changes)
+  * Switch to debhelper level 9
+  * debian/rules: Improved the clean target
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sun, 26 Oct 2014 00:22:35 +0200
+
+tiles (2.2.2-4) unstable; urgency=medium
+
+  * Team upload.
+  * Transition to libtomcat7-java
+  * debian/control:
+    - Standards-Version updated to 3.9.5 (no changes)
+    - Use canonical URLs for the Vcs-* fields
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 16 May 2014 12:47:41 +0200
+
+tiles (2.2.2-3) unstable; urgency=low
+
+  * Team upload.
+  * Build with source and target 1.5 to ensure a proper build
+    with Java7.  Thanks to James Page for the report and the
+    patch.  (Closes: #678118)
+
+ -- Niels Thykier <niels@thykier.net>  Tue, 19 Jun 2012 13:15:10 +0200
+
+tiles (2.2.2-2) unstable; urgency=low
+
+  [ Miguel Landaeta ]
+  * Team upload.
+  * Switch dependencies on Spring Framework 2.5 with 3.0. (Closes: #638386).
+
+  [ Damien Raude-Morvan ]
+  * Bump Standards-Version to 3.9.2: no changes needed.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sat, 20 Aug 2011 13:14:04 +0200
+
+tiles (2.2.2-1) unstable; urgency=low
+
+  [ Torsten Werner ]
+  * Change maintainers into Maintainers.
+
+  [ Damien Raude-Morvan ]
+  * New upstream bugfix release.
+  * Bump Standards-Version to 3.9.0: no changes needed.
+  * Use 3.0 (quilt) format.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Thu, 01 Jul 2010 01:12:16 +0200
+
+tiles (2.2.1-2) unstable; urgency=low
+
+  * New module: tiles-mvel
+  * Add Build-Depends on libmvel-java
+  * Add mvel.jar to debian/build.properties
+  * Bump Standards-Version to 3.8.4: no changes needed
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sat, 13 Mar 2010 22:49:46 +0100
+
+tiles (2.2.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - new modules: tiles-el, tiles-ognl, tiles-servlet-wildcard
+  * debian/maven.rules: Transform more dependencies
+  * debian/build.xml: Updated to build new modules
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sat, 12 Dec 2009 14:12:08 +0100
+
+tiles (2.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+   - Remove Build-Depends on libservlet2.4-java, libcommons-beanutils-java
+     and libcommons-logging-java
+   - Add Build-Depends on libslf4j-java, libognl-java, libservlet2.5-java,
+     libtomcat6-java, libspring-core-2.5-java, libspring-web-2.5-java
+     and libfreemarker-java
+   - Update Suggests accordingly
+  * Set Maintainer field to Debian Java Team
+   - Add myself as Uploaders
+   - Update my email address
+  * Bump Standards-Version to 3.8.3: no changes needed
+  * Bump debhelper version to 7
+  * Move api documentation to /usr/share/doc/libtiles-java/api/
+  * Maven POMs:
+    - Add a Build-Depends-Indep dependency on maven-repo-helper
+    - Use mh_installpoms and mh_installjar to install the POM and the jar to the
+     Maven repository
+  * Maven ant helper (build system):
+    - Add a Build-Depends dependency on maven-ant-helper
+    - Update debian/build.xml to use /usr/share/maven-ant-helper/maven-build.xml
+    - Remove all patches, quilt from Build-Depends and debian/README.source
+    - Build classpath is now defined in debian/build.properties
+  * Use default-jdk:
+    - Build-Depend on default-jdk instead of openjdk-6-jdk
+    - Use /usr/lib/jvm/default-java as JAVA_HOME
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sat, 24 Oct 2009 20:47:13 +0200
+
+tiles (2.0.6-1) unstable; urgency=low
+
+  * Initial release. (Closes: #497437)
+  * debian/control:
+    - don't use alternative in B-D line (increase build reproducibility)
+  * debian/build.xml: remove Javadoc API of Portlet module (build disabled)
+
+ -- Damien Raude-Morvan <drazzib@drazzib.com>  Sat, 21 Mar 2009 22:35:52 +0100
